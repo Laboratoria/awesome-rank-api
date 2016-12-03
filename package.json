@@ -4,7 +4,8 @@
   "description": "Awesome Rank API",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "postinstall": "sequelize db:migrate && sequelize db:seed:all"
   },
   "keywords": [
     "awesome",

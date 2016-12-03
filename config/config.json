@@ -19,6 +19,6 @@
     "database": "awesome_rank_production",
     "host": "127.0.0.1",
     "dialect": "mysql",
-    "use_env_variable": "cleardb-crystalline-15911"
+    "use_env_variable": "mysql://bcc1a83b1d6279:ee931dd9@us-cdbr-iron-east-04.cleardb.net/heroku_92dcbcc8fba5117?reconnect=true"
   }
 }
