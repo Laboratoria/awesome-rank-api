@@ -75,7 +75,7 @@ apiRoutes.get('/developers', function(req, res) {
 
 app.use('/api', apiRoutes);
 
-app.use(cors({ origin: null }));
+app.use(cors());
 
 app.listen(app.get('port'), function () {
 	console.log('Server started on port ' + app.get('port'));
