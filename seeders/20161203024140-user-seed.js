@@ -13,20 +13,11 @@ function encrypt(text){
 
 module.exports = {
   up: function (queryInterface, Sequelize) {
-    /*
-      Add altering commands here.
-      Return a promise to correctly handle asynchronicity.
-
-      Example:
-      return queryInterface.bulkInsert('Person', [{
-        name: 'John Doe',
-        isBetaMember: false
-      }], {});
-    */
-    return queryInterface.bulkInsert('Users', [{
-      name: 'Ivan',
-      lastname: 'Medina',
-      username: 'ivandevp',
+    return queryInterface.bulkInsert('users', [{
+      name: 'Lab',
+      lastname: 'Internacional',
+      username: 'awesome',
+      company: 'Laboratoria',
       password: encrypt('laboratoria'),
       createdAt: new Date(),
       updatedAt: new Date()
@@ -34,13 +25,6 @@ module.exports = {
   },
 
   down: function (queryInterface, Sequelize) {
-    /*
-      Add reverting commands here.
-      Return a promise to correctly handle asynchronicity.
-
-      Example:
-      return queryInterface.bulkDelete('Person', null, {});
-    */
-    return queryInterface.bulkDelete('Users', null, {});
+    return queryInterface.bulkDelete('users', null, {});
   }
 };

@@ -54,11 +54,22 @@ apiRoutes.post('/login', function(req, res) {
 			console.log('No user with the username ' + auth.username + ' has been found.');
 			res.json({ success: false });
 		} else {
-			console.log('Hello ' + auth.username + '!');
 			console.log('All attributes of user:', user.get());
-			res.json({ success: true, user: auth });
+			res.json({ success: true, user: {
+        id: user.id,
+        name: user.name,
+        lastname: user.lastname,
+        username: user.username,
+        company: user.company
+      } });
 		}
 	});
+});
+
+apiRoutes.get('/developers', function(req, res) {
+  models.Developer.all().then(function (developers) {
+    res.json({ developers: developers });
+  });
 });
 
 app.use('/api', apiRoutes);
