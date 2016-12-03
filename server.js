@@ -3,7 +3,6 @@ var app = express();
 var bodyParser = require('body-parser');
 var morgan = require('morgan');
 var jwt = require('jsonwebtoken');
-var cors = require('cors');
 var crypto = require('crypto'),
     algorithm = 'aes-256-ctr',
     password = 'laboraotria';
@@ -17,7 +16,11 @@ app.use(bodyParser.json());
 
 app.use(morgan('dev'));
 
-var apiRoutes = express.Router(); 
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
 
 var apiRoutes = express.Router(); 
 
@@ -74,8 +77,6 @@ apiRoutes.get('/developers', function(req, res) {
 });
 
 app.use('/api', apiRoutes);
-
-app.use(cors());
 
 app.listen(app.get('port'), function () {
 	console.log('Server started on port ' + app.get('port'));
