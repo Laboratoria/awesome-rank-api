@@ -76,6 +76,12 @@ apiRoutes.get('/developers', function(req, res) {
   });
 });
 
+apiRoutes.get('/questions', function(req, res) {
+  models.Question.all().then(function (questions) {
+    res.json({ questions: questions });
+  });
+});
+
 app.use('/api', apiRoutes);
 
 app.listen(app.get('port'), function () {

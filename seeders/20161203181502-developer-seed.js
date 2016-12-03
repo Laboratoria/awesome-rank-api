@@ -7,7 +7,7 @@ module.exports = {
       lastname: 'Mora',
       age: 26,
       campus: 'Santiago de Chile',
-      photoUrl: 'http://awesome-rank.herokuapp.com/img/girls/dana.jpg',
+      photoUrl: 'https://awesome-rank.herokuapp.com/img/girls/dana.jpg',
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
@@ -15,7 +15,7 @@ module.exports = {
       lastname: 'Orozco',
       age: 27,
       campus: 'Ciudad de México',
-      photoUrl: 'http://awesome-rank.herokuapp.com/img/girls/karen.jpg',
+      photoUrl: 'https://awesome-rank.herokuapp.com/img/girls/karen.jpg',
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
@@ -23,7 +23,7 @@ module.exports = {
       lastname: 'Navarro',
       age: 19,
       campus: 'Lima',
-      photoUrl: 'http://awesome-rank.herokuapp.com/img/girls/diana.jpg',
+      photoUrl: 'https://awesome-rank.herokuapp.com/img/girls/diana.jpg',
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
@@ -31,7 +31,7 @@ module.exports = {
       lastname: 'Ortiz de Zevallos',
       age: 25,
       campus: 'Lima',
-      photoUrl: 'http://awesome-rank.herokuapp.com/img/girls/paola.jpeg',
+      photoUrl: 'https://awesome-rank.herokuapp.com/img/girls/paola.jpeg',
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
@@ -39,7 +39,7 @@ module.exports = {
       lastname: 'Quiroz',
       age: 19,
       campus: 'Lima',
-      photoUrl: 'http://awesome-rank.herokuapp.com/img/girls/maryori.jpg',
+      photoUrl: 'https://awesome-rank.herokuapp.com/img/girls/maryori.jpg',
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
@@ -47,7 +47,7 @@ module.exports = {
       lastname: 'Opazo',
       age: 25,
       campus: 'Santiago de Chile',
-      photoUrl: 'http://awesome-rank.herokuapp.com/img/girls/su.jpg',
+      photoUrl: 'https://awesome-rank.herokuapp.com/img/girls/su.jpg',
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
@@ -55,7 +55,7 @@ module.exports = {
       lastname: 'Neira',
       age: 30,
       campus: 'Santiago de Chile',
-      photoUrl: 'http://awesome-rank.herokuapp.com/img/girls/alexandra.jpeg',
+      photoUrl: 'https://awesome-rank.herokuapp.com/img/girls/alexandra.jpeg',
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
@@ -63,7 +63,7 @@ module.exports = {
       lastname: 'Martinez',
       age: 25,
       campus: 'Ciudad de México',
-      photoUrl: 'http://awesome-rank.herokuapp.com/img/girls/elisa.jpg',
+      photoUrl: 'https://awesome-rank.herokuapp.com/img/girls/elisa.jpg',
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
@@ -71,12 +71,11 @@ module.exports = {
       lastname: 'Porraz',
       age: 27,
       campus: 'Ciudad de México',
-      photoUrl: 'http://awesome-rank.herokuapp.com/img/girls/maciel.jpg',
+      photoUrl: 'https://awesome-rank.herokuapp.com/img/girls/maciel.jpg',
       createdAt: new Date(),
       updatedAt: new Date()
     }], {});
   },
-
   down: function (queryInterface, Sequelize) {
     return queryInterface.bulkDelete('developers', null, {});
   }
