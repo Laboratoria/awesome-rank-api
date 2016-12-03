@@ -1,0 +1,27 @@
+{
+  "name": "awesome-rank-api",
+  "version": "1.0.0",
+  "description": "Awesome Rank API",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "postinstall": "sequelize db:migrate && sequelize db:seed:all"
+  },
+  "keywords": [
+    "awesome",
+    "rank",
+    "api",
+    "jwt"
+  ],
+  "author": "Ivan Medina <ivan@laboratoria.la>",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "jsonwebtoken": "^7.1.9",
+    "morgan": "^1.7.0",
+    "mysql": "^2.12.0",
+    "sequelize": "^3.27.0",
+    "sequelize-cli": "^2.4.0"
+  }
+}
