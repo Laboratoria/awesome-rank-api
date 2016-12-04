@@ -82,8 +82,29 @@ apiRoutes.get('/questions', function(req, res) {
   });
 });
 
-apiRoutes.get('/rankings', function(req, res) {
-  console.log(models.Ranking);
+apiRoutes.post('/rankings', function(req, res) {
+  var user, developer, question;
+  models.User.findById(req.body.userId)
+    .then(function (_user) {
+      user = _user;
+      return models.Developer.findById(req.body.developerId);
+    })
+    .then(function (_developer) {
+      developer = _developer;
+      return models.Question.findById(req.body.questionId);
+    })
+    .then(function (_question) {
+      question = _question;
+      return models.Ranking.create({
+        UserId: user.id,
+        DeveloperId: developer.id,
+        QuestionId: question.id,
+        points: req.body.points
+      });
+    })
+    .then(function (_rank) {
+      res.send({ success: true, rank: _rank });
+    });
 });
 
 app.use('/api', apiRoutes);

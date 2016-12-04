@@ -3,77 +3,77 @@
 module.exports = {
   up: function (queryInterface, Sequelize) {
     return queryInterface.bulkInsert('questions', [{
-      description: 'Estado Emocional',
+      description: 'Emotional status',
       type: 'hse-1',
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
-      description: 'Disposición a retos',
+      description: 'Challenge taker',
       type: 'hse-1',
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
-      description: 'Adaptabilidad',
+      description: 'Adaptability',
       type: 'hse-1',
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
-      description: 'Expresión',
+      description: 'Thinking out loud',
       type: 'hse-2',
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
-      description: 'Escucha',
+      description: 'Listening',
       type: 'hse-2',
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
-      description: 'Participación',
+      description: 'Participation',
       type: 'hse-2',
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
-      description: 'Comunicación de Errores',
+      description: 'Error Communication',
       type: 'hse-2',
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
-      description: 'Comunicación y Respeto',
+      description: 'Communication & Respect',
       type: 'hse-3',
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
-      description: 'Relación con Autoridad',
+      description: 'Leadership',
       type: 'hse-3',
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
-      description: 'Actitud Positiva',
+      description: 'Possitive actitude',
       type: 'hse-4',
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
-      description: 'Pasión por el Trabajo',
+      description: 'Work passion',
       type: 'hse-4',
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
-      description: 'Manejo de Control de Versiones',
+      description: 'Version Control System',
       type: 'tech',
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
-      description: 'Uso correcto de lenguaje técnico',
+      description: 'Techie language',
       type: 'tech',
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
-      description: 'Aplicacion de Conocimientos de Programacion',
+      description: 'Programming Fundamentals',
       type: 'tech',
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
-      description: 'Aplicación de Conceptos de Metología Ágil',
+      description: 'Agile Knowledge',
       type: 'tech',
       createdAt: new Date(),
       updatedAt: new Date()
@@ -83,7 +83,7 @@ module.exports = {
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
-      description: 'Look & feel / Usabilidad / UX',
+      description: 'Look & feel / Usability / UX',
       type: 'tech',
       createdAt: new Date(),
       updatedAt: new Date()
