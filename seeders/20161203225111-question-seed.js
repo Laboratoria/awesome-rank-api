@@ -33,7 +33,7 @@ module.exports = {
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
-      description: 'Error Communication',
+      description: 'Error communication',
       type: 'hse-2',
       createdAt: new Date(),
       updatedAt: new Date()
@@ -43,17 +43,17 @@ module.exports = {
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
-      description: 'Leadership',
+      description: 'Relationship with authority',
       type: 'hse-3',
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
-      description: 'Possitive actitude',
+      description: 'Possitive attitude',
       type: 'hse-4',
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
-      description: 'Work passion',
+      description: 'Passion for work',
       type: 'hse-4',
       createdAt: new Date(),
       updatedAt: new Date()
@@ -68,17 +68,17 @@ module.exports = {
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
-      description: 'Programming Fundamentals',
+      description: 'Programming fundamentals',
       type: 'tech',
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
-      description: 'Agile Knowledge',
+      description: 'Agile methodologies',
       type: 'tech',
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
-      description: 'Being Resourceful',
+      description: 'Being resourceful',
       type: 'tech',
       createdAt: new Date(),
       updatedAt: new Date()

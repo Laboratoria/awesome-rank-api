@@ -1,6 +1,4 @@
 'use strict';
-// var User = require('./user.js');
-
 module.exports = function(sequelize, DataTypes) {
   var Ranking = sequelize.define('Ranking', {
     points: DataTypes.INTEGER

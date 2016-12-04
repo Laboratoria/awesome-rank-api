@@ -77,8 +77,12 @@ apiRoutes.get('/developers', function(req, res) {
 });
 
 apiRoutes.get('/questions', function(req, res) {
-  models.Question.all().then(function (questions) {
-    res.json({ questions: questions });
+  models.Question.all({
+    include: [{
+      model: models.Answer,
+    }]
+  }).then(function (questions) {
+    res.json({ questions: questions});
   });
 });
 
