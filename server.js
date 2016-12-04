@@ -82,6 +82,10 @@ apiRoutes.get('/questions', function(req, res) {
   });
 });
 
+apiRoutes.get('/rankings', function(req, res) {
+  console.log(models.Ranking);
+});
+
 app.use('/api', apiRoutes);
 
 app.listen(app.get('port'), function () {
