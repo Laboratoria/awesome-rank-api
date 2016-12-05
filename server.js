@@ -24,7 +24,7 @@ var queryRank = "select d.name, d.lastname, d.age, d.campus, d.photoUrl, 'hse' a
   "inner join questions q on r.questionId = q.id " +
   "where q.type = 'tech' and r.points > 0 " +
   "group by d.name, d.lastname, d.age, d.campus, d.photoUrl " +
-  "order by 1";
+  "order by 1, 2";
 
 app.set('port', process.env.PORT || 8080);
 
