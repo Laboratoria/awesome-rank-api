@@ -48,9 +48,9 @@ module.exports = {
     }, {
       name: 'Ministerio',
       lastname: 'Produccion',
-      username: 'minproduccion',
+      username: 'minprod',
       company: 'MinProduccion',
-      password: encrypt('minproduccion'),
+      password: encrypt('minprod'),
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
@@ -95,10 +95,18 @@ module.exports = {
       updatedAt: new Date()
     }, {
       name: 'Empresa',
-      lastname: 'Cignum',
-      username: 'cignum',
-      company: 'Cignum',
-      password: encrypt('cignum'),
+      lastname: 'Cignium',
+      username: 'cignium',
+      company: 'Cignium',
+      password: encrypt('cignium'),
+      createdAt: new Date(),
+      updatedAt: new Date()
+    }, {
+      name: 'Empresa',
+      lastname: 'Everis',
+      username: 'everis',
+      company: 'Everis',
+      password: encrypt('everis'),
       createdAt: new Date(),
       updatedAt: new Date()
     }], {});
