@@ -109,6 +109,14 @@ module.exports = {
       password: encrypt('everis'),
       createdAt: new Date(),
       updatedAt: new Date()
+    }, {
+      name: 'Empresa',
+      lastname: 'Globant',
+      username: 'globant',
+      company: 'Globant',
+      password: encrypt('globant'),
+      createdAt: new Date(),
+      updatedAt: new Date()
     }], {});
   },
 
