@@ -9,21 +9,21 @@ var crypto = require('crypto'),
 
 var models = require('./models');
 
-var queryRank = "select d.name, d.lastname, d.age, d.campus, 'hse' as type, AVG(r.points) as average " +
+var queryRank = "select d.name, d.lastname, d.age, d.campus, d.photoUrl, 'hse' as type, AVG(r.points) as average " +
   "from rankings r " +
   "inner join users u on r.userId = u.id " +
   "inner join developers d on r.developerId = d.id " +
   "inner join questions q on r.questionId = q.id " +
   "where q.type like 'hse%' " +
-  "group by d.name, d.lastname, d.age, d.campus " +
+  "group by d.name, d.lastname, d.age, d.campus, d.photoUrl " +
   "union " +
-  "select d.name, d.lastname, d.age, d.campus, 'tech' as type, AVG(r.points) as average " +
+  "select d.name, d.lastname, d.age, d.campus, d.photoUrl, 'tech' as type, AVG(r.points) as average " +
   "from rankings r " +
   "inner join users u on r.userId = u.id " +
   "inner join developers d on r.developerId = d.id " +
   "inner join questions q on r.questionId = q.id " +
   "where q.type = 'tech' " +
-  "group by d.name, d.lastname, d.age, d.campus " +
+  "group by d.name, d.lastname, d.age, d.campus, d.photoUrl " +
   "order by 1";
 
 app.set('port', process.env.PORT || 8080);
