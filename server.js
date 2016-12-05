@@ -9,6 +9,23 @@ var crypto = require('crypto'),
 
 var models = require('./models');
 
+var queryRank = "select d.name, d.lastname, d.age, d.campus, 'hse' as type, AVG(r.points) as average " +
+  "from rankings r " +
+  "inner join users u on r.userId = u.id " +
+  "inner join developers d on r.developerId = d.id " +
+  "inner join questions q on r.questionId = q.id " +
+  "where q.type like 'hse%' " +
+  "group by d.name, d.lastname, d.age, d.campus " +
+  "union " +
+  "select d.name, d.lastname, d.age, d.campus, 'tech' as type, AVG(r.points) as average " +
+  "from rankings r " +
+  "inner join users u on r.userId = u.id " +
+  "inner join developers d on r.developerId = d.id " +
+  "inner join questions q on r.questionId = q.id " +
+  "where q.type = 'tech' " +
+  "group by d.name, d.lastname, d.age, d.campus " +
+  "order by 1";
+
 app.set('port', process.env.PORT || 8080);
 
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -86,7 +103,7 @@ apiRoutes.get('/questions', function(req, res) {
   });
 });
 
-apiRoutes.post('/rankings', function(req, res) {
+apiRoutes.post('/ratings', function(req, res) {
   var user, developer, question;
   models.User.findById(req.body.userId)
     .then(function (_user) {
@@ -106,8 +123,15 @@ apiRoutes.post('/rankings', function(req, res) {
         points: req.body.points
       });
     })
-    .then(function (_rank) {
-      res.send({ success: true, rank: _rank });
+    .then(function (_rating) {
+      res.send({ success: true, rank: _rating });
+    });
+});
+
+apiRoutes.get('/ranking', function (req, res) {
+  models.sequelize.query(queryRank, { type: models.sequelize.QueryTypes.SELECT})
+    .then(function (results) {
+      res.send({ success: true, ranking: results });
     });
 });
 
