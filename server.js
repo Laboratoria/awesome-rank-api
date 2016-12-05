@@ -88,7 +88,9 @@ apiRoutes.post('/login', function(req, res) {
 });
 
 apiRoutes.get('/developers', function(req, res) {
-  models.Developer.all().then(function (developers) {
+  models.Developer.all({
+    order: 'name, lastname ASC'
+  }).then(function (developers) {
     res.json({ developers: developers });
   });
 });
