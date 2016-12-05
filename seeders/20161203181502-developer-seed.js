@@ -77,7 +77,7 @@ module.exports = {
     }, {
       name: 'Teresa',
       lastname: 'Lara',
-      age: null,
+      age: 24,
       campus: 'Lima',
       photoUrl: 'https://awesome-rank.herokuapp.com/img/developers/teresa.jpeg',
       createdAt: new Date(),
@@ -85,7 +85,7 @@ module.exports = {
     }, {
       name: 'Sheila',
       lastname: 'Acuña',
-      age: null,
+      age: 25,
       campus: 'Lima',
       photoUrl: 'https://awesome-rank.herokuapp.com/img/developers/sheila.jpeg',
       createdAt: new Date(),
@@ -101,7 +101,7 @@ module.exports = {
     }, {
       name: 'Sandy',
       lastname: 'Ciquero',
-      age: null,
+      age: 26,
       campus: 'Lima',
       photoUrl: 'https://awesome-rank.herokuapp.com/img/developers/sandy.jpeg',
       createdAt: new Date(),
@@ -109,7 +109,7 @@ module.exports = {
     }, {
       name: 'Cilene',
       lastname: 'De la Cruz',
-      age: null,
+      age: 24,
       campus: 'Lima',
       photoUrl: 'https://awesome-rank.herokuapp.com/img/developers/cilene.jpeg',
       createdAt: new Date(),
@@ -117,7 +117,7 @@ module.exports = {
     }, {
       name: 'Karol',
       lastname: 'Orrillo',
-      age: null,
+      age: 25,
       campus: 'Lima',
       photoUrl: 'https://awesome-rank.herokuapp.com/img/developers/karol.jpeg',
       createdAt: new Date(),
@@ -125,7 +125,7 @@ module.exports = {
     }, {
       name: 'Janet',
       lastname: 'Quispe',
-      age: null,
+      age: 24,
       campus: 'Lima',
       photoUrl: 'https://awesome-rank.herokuapp.com/img/developers/janet.jpg',
       createdAt: new Date(),
@@ -133,7 +133,7 @@ module.exports = {
     }, {
       name: 'Yeiny',
       lastname: 'Gonzalez',
-      age: null,
+      age: 29,
       campus: 'Lima',
       photoUrl: 'https://awesome-rank.herokuapp.com/img/developers/yeiny.jpeg',
       createdAt: new Date(),
@@ -141,7 +141,7 @@ module.exports = {
     }, {
       name: 'Christy',
       lastname: 'Castro',
-      age: null,
+      age: 25,
       campus: 'Lima',
       photoUrl: 'https://awesome-rank.herokuapp.com/img/developers/christy.jpeg',
       createdAt: new Date(),
@@ -149,7 +149,7 @@ module.exports = {
     }, {
       name: 'Sthefany',
       lastname: 'Floriano',
-      age: null,
+      age: 21,
       campus: 'Lima',
       photoUrl: 'https://awesome-rank.herokuapp.com/img/developers/sthefany.jpeg',
       createdAt: new Date(),
@@ -157,7 +157,7 @@ module.exports = {
     }, {
       name: 'Michelle',
       lastname: 'Seguil',
-      age: null,
+      age: 18,
       campus: 'Lima',
       photoUrl: 'https://awesome-rank.herokuapp.com/img/developers/michelle.jpeg',
       createdAt: new Date(),
@@ -165,7 +165,7 @@ module.exports = {
     }, {
       name: 'Liz',
       lastname: 'Ruelas',
-      age: null,
+      age: 22,
       campus: 'Lima',
       photoUrl: 'https://awesome-rank.herokuapp.com/img/developers/liz.jpg',
       createdAt: new Date(),
@@ -173,7 +173,7 @@ module.exports = {
     }, {
       name: 'Alexandra',
       lastname: 'Fernandez',
-      age: null,
+      age: 18,
       campus: 'Lima',
       photoUrl: 'https://awesome-rank.herokuapp.com/img/developers/alexandra_f.jpeg',
       createdAt: new Date(),
@@ -181,7 +181,7 @@ module.exports = {
     }, {
       name: 'Sara',
       lastname: 'Castillo',
-      age: null,
+      age: 29,
       campus: 'Lima',
       photoUrl: 'https://awesome-rank.herokuapp.com/img/developers/sara.jpg',
       createdAt: new Date(),
@@ -189,7 +189,7 @@ module.exports = {
     }, {
       name: 'Jazmine',
       lastname: 'Angoma',
-      age: null,
+      age: 21,
       campus: 'Lima',
       photoUrl: 'https://awesome-rank.herokuapp.com/img/developers/jazmine.jpeg',
       createdAt: new Date(),
@@ -197,7 +197,7 @@ module.exports = {
     }, {
       name: 'Sammia',
       lastname: 'Zubizarreta',
-      age: null,
+      age: 18,
       campus: 'Lima',
       photoUrl: 'https://awesome-rank.herokuapp.com/img/developers/sammia.jpeg',
       createdAt: new Date(),
@@ -205,7 +205,7 @@ module.exports = {
     }, {
       name: 'Milagros',
       lastname: 'Quispe',
-      age: null,
+      age: 25,
       campus: 'Lima',
       photoUrl: 'https://awesome-rank.herokuapp.com/img/developers/milagros.jpeg',
       createdAt: new Date(),
@@ -213,7 +213,7 @@ module.exports = {
     }, {
       name: 'María de Fátima',
       lastname: 'Jácobo',
-      age: null,
+      age: 23,
       campus: 'Lima',
       photoUrl: 'https://awesome-rank.herokuapp.com/img/developers/fatima.jpeg',
       createdAt: new Date(),
@@ -221,7 +221,7 @@ module.exports = {
     }, {
       name: 'Andrea',
       lastname: 'Maucaylli',
-      age: null,
+      age: 25,
       campus: 'Lima',
       photoUrl: 'https://awesome-rank.herokuapp.com/img/developers/andrea_m.jpg',
       createdAt: new Date(),
@@ -229,7 +229,7 @@ module.exports = {
     }, {
       name: 'Andrea',
       lastname: 'Cabrera',
-      age: null,
+      age: 20,
       campus: 'Lima',
       photoUrl: 'https://awesome-rank.herokuapp.com/img/developers/andrea_c.jpeg',
       createdAt: new Date(),
@@ -237,7 +237,7 @@ module.exports = {
     }, {
       name: 'Jennifer',
       lastname: 'Jara',
-      age: null,
+      age: 24,
       campus: 'Lima',
       photoUrl: 'https://awesome-rank.herokuapp.com/img/developers/jennifer.jpeg',
       createdAt: new Date(),
@@ -245,7 +245,7 @@ module.exports = {
     }, {
       name: 'Sofia',
       lastname: 'Caballero',
-      age: null,
+      age: 29,
       campus: 'Lima',
       photoUrl: 'https://awesome-rank.herokuapp.com/img/developers/sofia.jpeg',
       createdAt: new Date(),
@@ -253,7 +253,7 @@ module.exports = {
     }, {
       name: 'Anabel',
       lastname: 'Espinal',
-      age: null,
+      age: 18,
       campus: 'Lima',
       photoUrl: 'https://awesome-rank.herokuapp.com/img/developers/anabel.jpeg',
       createdAt: new Date(),
@@ -261,7 +261,7 @@ module.exports = {
     }, {
       name: 'Paola',
       lastname: 'Quispe',
-      age: null,
+      age: 22,
       campus: 'Lima',
       photoUrl: 'https://awesome-rank.herokuapp.com/img/developers/paola_q.jpeg',
       createdAt: new Date(),
@@ -269,7 +269,7 @@ module.exports = {
     }, {
       name: 'Lezmit',
       lastname: 'Galarza',
-      age: null,
+      age: 25,
       campus: 'Lima',
       photoUrl: 'https://awesome-rank.herokuapp.com/img/developers/lezmit.jpeg',
       createdAt: new Date(),
@@ -277,7 +277,7 @@ module.exports = {
     }, {
       name: 'Melissa',
       lastname: 'Berrocal',
-      age: null,
+      age: 26,
       campus: 'Lima',
       photoUrl: 'https://awesome-rank.herokuapp.com/img/developers/melissa.jpeg',
       createdAt: new Date(),
@@ -285,7 +285,7 @@ module.exports = {
     }, {
       name: 'Lilibet',
       lastname: 'Hualtibamba',
-      age: null,
+      age: 27,
       campus: 'Lima',
       photoUrl: 'https://awesome-rank.herokuapp.com/img/developers/lili.jpeg',
       createdAt: new Date(),
@@ -293,7 +293,7 @@ module.exports = {
     }, {
       name: 'Sheyla',
       lastname: 'Breña',
-      age: null,
+      age: 20,
       campus: 'Lima',
       photoUrl: 'https://awesome-rank.herokuapp.com/img/developers/sheyla.jpeg',
       createdAt: new Date(),
@@ -301,7 +301,7 @@ module.exports = {
     }, {
       name: 'Carol',
       lastname: 'Juarez',
-      age: null,
+      age: 22,
       campus: 'Lima',
       photoUrl: 'https://awesome-rank.herokuapp.com/img/developers/carol.jpeg',
       createdAt: new Date(),
