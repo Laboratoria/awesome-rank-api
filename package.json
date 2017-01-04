@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "postinstall": "sequelize db:migrate && sequelize db:seed:all"
+    "postinstall": "sequelize db:migrate"
   },
   "keywords": [
     "awesome",
