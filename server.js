@@ -14,7 +14,7 @@ var queryRank = "select d.name, d.lastname, d.age, d.campus, d.photoUrl, 'hse' a
   "inner join users u on r.userId = u.id " +
   "inner join developers d on r.developerId = d.id " +
   "inner join questions q on r.questionId = q.id " +
-  "where q.type like 'hse%' " +
+  "where q.type like 'hse%' and r.points > 0 " +
   "group by d.name, d.lastname, d.age, d.campus, d.photoUrl " +
   "union " +
   "select d.name, d.lastname, d.age, d.campus, d.photoUrl, 'tech' as type, AVG(r.points) as average " +
@@ -22,9 +22,9 @@ var queryRank = "select d.name, d.lastname, d.age, d.campus, d.photoUrl, 'hse' a
   "inner join users u on r.userId = u.id " +
   "inner join developers d on r.developerId = d.id " +
   "inner join questions q on r.questionId = q.id " +
-  "where q.type = 'tech' " +
+  "where q.type = 'tech' and r.points > 0 " +
   "group by d.name, d.lastname, d.age, d.campus, d.photoUrl " +
-  "order by 1";
+  "order by 1, 2";
 
 app.set('port', process.env.PORT || 8080);
 
