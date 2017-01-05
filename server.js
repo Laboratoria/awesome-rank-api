@@ -88,13 +88,19 @@ apiRoutes.post('/login', function(req, res) {
 });
 
 apiRoutes.get('/developers', function(req, res) {
-  models.Developer.all({
-    order: 'name, lastname ASC',
+  models.Squad.all({
+    attributes: ['id', 'name'],
     include: [{
-      model: models.Squad,
-    }]
-  }).then(function (developers) {
-    res.json({ developers: developers });
+      model: models.Developer,
+      attributes: ['id', 'name', 'lastname', 'photoUrl', 'title', 'captainLink']
+    }],
+    order: [
+      [ 'name', 'ASC' ],
+      [ models.Developer, 'name', 'ASC' ],
+      [ models.Developer, 'lastname', 'ASC' ]
+    ]
+  }).then(function (squads) {
+    res.json({ squads: squads });
   });
 });
 
