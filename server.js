@@ -15,8 +15,7 @@ fs.readFile('./queries/ranking.sql', 'utf8', function (err, data) {
   if (err) {
     console.log(err);
   }
-  console.log(data);
-  rankQuery = data;
+  rankQuery = data.split("\n\n");
 });
 
 app.set('port', process.env.PORT || 8080);
@@ -117,9 +116,18 @@ apiRoutes.post('/ratings', function(req, res) {
 });
 
 apiRoutes.get('/ranking', function (req, res) {
-  models.sequelize.query(rankQuery)
-    .then(function (results) {
-      res.send({ success: true, ranking: results });
+  models.sequelize.query(rankQuery[0])
+    .then(function () {
+      models.sequelize.query(rankQuery[1])
+        .then(function () {
+          models.sequelize.query(rankQuery[2])
+            .then(function (ranking) {
+              res.send({ success: true, ranking: ranking });
+            });
+        });
+    })
+    .catch(function (err) {
+      console.log(err);
     });
 });
 
