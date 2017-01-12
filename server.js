@@ -3,28 +3,20 @@ var app = express();
 var bodyParser = require('body-parser');
 var morgan = require('morgan');
 var jwt = require('jsonwebtoken');
+var fs = require('fs');
 var crypto = require('crypto'),
     algorithm = 'aes-256-ctr',
     password = 'laboraotria';
 
+var rankQuery = '';
 var models = require('./models');
 
-var queryRank = "select d.name, d.lastname, d.age, d.campus, d.photoUrl, 'hse' as type, AVG(r.points) as average " +
-  "from rankings r " +
-  "inner join users u on r.userId = u.id " +
-  "inner join developers d on r.developerId = d.id " +
-  "inner join questions q on r.questionId = q.id " +
-  "where q.type like 'hse%' and r.points > 0 " +
-  "group by d.name, d.lastname, d.age, d.campus, d.photoUrl " +
-  "union " +
-  "select d.name, d.lastname, d.age, d.campus, d.photoUrl, 'tech' as type, AVG(r.points) as average " +
-  "from rankings r " +
-  "inner join users u on r.userId = u.id " +
-  "inner join developers d on r.developerId = d.id " +
-  "inner join questions q on r.questionId = q.id " +
-  "where q.type = 'tech' and r.points > 0 " +
-  "group by d.name, d.lastname, d.age, d.campus, d.photoUrl " +
-  "order by 1, 2";
+fs.readFile('./queries/ranking.sql', 'utf8', function (err, data) {
+  if (err) {
+    console.log(err);
+  }
+  rankQuery = data;
+});
 
 app.set('port', process.env.PORT || 8080);
 
@@ -115,7 +107,7 @@ apiRoutes.post('/ratings', function(req, res) {
 });
 
 apiRoutes.get('/ranking', function (req, res) {
-  models.sequelize.query(queryRank, { type: models.sequelize.QueryTypes.SELECT})
+  models.sequelize.query(rankQuery, { type: models.sequelize.QueryTypes.SELECT})
     .then(function (results) {
       res.send({ success: true, ranking: results });
     });
