@@ -15,6 +15,7 @@ fs.readFile('./queries/ranking.sql', 'utf8', function (err, data) {
   if (err) {
     console.log(err);
   }
+  console.log(data);
   rankQuery = data;
 });
 
@@ -116,7 +117,7 @@ apiRoutes.post('/ratings', function(req, res) {
 });
 
 apiRoutes.get('/ranking', function (req, res) {
-  models.sequelize.query(rankQuery, { type: models.sequelize.QueryTypes.SELECT})
+  models.sequelize.query(rankQuery)
     .then(function (results) {
       res.send({ success: true, ranking: results });
     });
