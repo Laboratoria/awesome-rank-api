@@ -68,13 +68,7 @@ apiRoutes.post('/login', function(req, res) {
 			res.json({ success: false });
 		} else {
 			console.log('All attributes of user:', user.get());
-			res.json({ success: true, user: {
-        id: user.id,
-        name: user.name,
-        lastname: user.lastname,
-        username: user.username,
-        company: user.company
-      } });
+			res.json({ success: true, user: user });
 		}
 	});
 });
