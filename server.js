@@ -112,12 +112,14 @@ apiRoutes.post('/ratings', function(req, res) {
 });
 
 apiRoutes.get('/ranking', function (req, res) {
+  var campusId = req.query.campusId;
   models.sequelize.query(rankQuery[0])
     .then(function () {
       models.sequelize.query(rankQuery[1])
         .then(function () {
-          models.sequelize.query(rankQuery[2])
-            .then(function (ranking) {
+          models.sequelize.query(rankQuery[2], {
+            replacements: [ campusId ]
+          }).then(function (ranking) {
               res.send({ success: true, ranking: ranking });
             });
         });
