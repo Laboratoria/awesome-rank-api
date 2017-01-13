@@ -20,7 +20,7 @@ AS (
   group by 1
 );
 
-select d.name, d.lastname, d.age, d.campusId, d.photoUrl, 
+select distinct d.name, d.lastname, d.age, d.campusId, d.photoUrl, 
 d.title, s.name as 'squad', tp.avgtech, tss.avghse
 from developers d
 inner join squads s on d.squadId = s.id
