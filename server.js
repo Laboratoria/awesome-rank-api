@@ -74,11 +74,13 @@ apiRoutes.post('/login', function(req, res) {
 });
 
 apiRoutes.get('/developers', function(req, res) {
-  models.Squad.all({
+  var filter = { campusId: req.query.campusId };
+  models.Squad.findAll({
     attributes: ['id', 'name'],
     include: [{
       model: models.Developer,
-      attributes: ['id', 'name', 'lastname', 'photoUrl', 'title', 'captainLink']
+      attributes: ['id', 'name', 'lastname', 'photoUrl', 'title', 'captainLink'],
+      where: filter
     }],
     order: [
       [ 'name', 'ASC' ],
