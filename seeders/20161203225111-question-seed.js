@@ -3,87 +3,104 @@
 module.exports = {
   up: function (queryInterface, Sequelize) {
     return queryInterface.bulkInsert('questions', [{
-      description: 'Emotional status',
+      title: 'Emotional status',
+			description: 'Emotional status',
       type: 'hse-1',
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
-      description: 'Challenge taker',
+      title: 'Challenge taker',
+			description: 'Challenge taker',
       type: 'hse-1',
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
-      description: 'Adaptability',
+      title: 'Adaptability',
+			description: 'Adaptability',
       type: 'hse-1',
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
-      description: 'Thinking out loud',
+      title: 'Thinking out loud',
+			description: 'Thinking out loud',
       type: 'hse-2',
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
-      description: 'Listening',
+      title: 'Listening',
+			description: 'Listening',
       type: 'hse-2',
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
-      description: 'Participation',
+      title: 'Participation',
+			description: 'Participation',
       type: 'hse-2',
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
-      description: 'Error communication',
+      title: 'Error communication',
+			description: 'Error communication',
       type: 'hse-2',
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
-      description: 'Communication & Respect',
+      title: 'Communication & Respect',
+			description: 'Communication & Respect',
       type: 'hse-3',
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
-      description: 'Relationship with authority',
+      title: 'Relationship with authority',
+			description: 'Relationship with authority',
       type: 'hse-3',
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
-      description: 'Possitive attitude',
+      title: 'Possitive attitude',
+			description: 'Possitive attitude',
       type: 'hse-4',
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
-      description: 'Passion for work',
+      title: 'Passion for work',
+			description: 'Passion for work',
       type: 'hse-4',
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
-      description: 'Version Control System',
+      title: 'Version Control System',
+			description: 'Version Control System',
       type: 'tech',
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
-      description: 'Techie language',
+      title: 'Techie language',
+			description: 'Techie language',
       type: 'tech',
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
-      description: 'Programming fundamentals',
+      title: 'Programming fundamentals',
+			description: 'Programming fundamentals',
       type: 'tech',
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
-      description: 'Agile methodologies',
+      title: 'Agile methodologies',
+			description: 'Agile methodologies',
       type: 'tech',
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
-      description: 'Being resourceful',
+      title: 'Being resourceful',
+			description: 'Being resourceful',
       type: 'tech',
       createdAt: new Date(),
       updatedAt: new Date()
     }, {
-      description: 'Look & feel / Usability / UX',
+      title: 'Look & feel / Usability / UX',
+			description: 'Look & feel / Usability / UX',
       type: 'tech',
       createdAt: new Date(),
       updatedAt: new Date()

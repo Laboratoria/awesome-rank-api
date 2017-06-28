@@ -31,7 +31,7 @@ app.use(function(req, res, next) {
   next();
 });
 
-var apiRoutes = express.Router(); 
+var apiRoutes = express.Router();
 
 var encrypt = function (text){
   var cipher = crypto.createCipher(algorithm,password)
@@ -39,7 +39,7 @@ var encrypt = function (text){
   crypted += cipher.final('hex');
   return crypted;
 };
- 
+
 var decrypt = function (text){
   var decipher = crypto.createDecipher(algorithm,password)
   var dec = decipher.update(text,'hex','utf8')
@@ -57,11 +57,11 @@ apiRoutes.post('/login', function(req, res) {
     	password: req.body.password
     };
 
-    models.User.find({ 
-    	where: { 
-    		username: auth.username, 
+    models.User.find({
+    	where: {
+    		username: auth.username,
     		password: encrypt(auth.password)
-    	} 
+    	}
     }).then(function(user) {
 		if (!user) {
 			console.log('No user with the username ' + auth.username + ' has been found.');
@@ -74,14 +74,20 @@ apiRoutes.post('/login', function(req, res) {
 });
 
 apiRoutes.get('/developers', function(req, res) {
-  var filter = { campusId: req.query.campusId };
+  var developerFilter = {
+		campusId: req.query.campusId
+	};
+	var squadFilter = {
+		userId: req.query.userId
+	};
   models.Squad.findAll({
     attributes: ['id', 'name'],
     include: [{
       model: models.Developer,
       attributes: ['id', 'name', 'lastname', 'photoUrl', 'title', 'captainLink'],
-      where: filter
+      where: developerFilter
     }],
+		where: squadFilter,
     order: [
       [ 'name', 'ASC' ],
       [ models.Developer, 'name', 'ASC' ],
