@@ -1,4 +1,4 @@
-CREATE TEMPORARY TABLE IF NOT EXISTS
+CREATE TABLE IF NOT EXISTS
   tech_points ( INDEX(id) )
 AS (
   select d.id, AVG(r.points) as 'avgtech'
@@ -9,7 +9,7 @@ AS (
   group by 1
 );
 
-CREATE TEMPORARY TABLE IF NOT EXISTS
+CREATE TABLE IF NOT EXISTS
   soft_skill_points ( INDEX(id) )
 AS (
   select d.id, AVG(r.points) as 'avghse'
@@ -21,12 +21,15 @@ AS (
 );
 
 select distinct d.name, d.lastname, d.age, d.campusId, d.photoUrl,
-d.title, s.name as 'squad', IFNULL(tp.avgtech, 0) as avgtech,
-IFNULL(tss.avghse, 0) as avghse
+d.title, s.name as 'squad', d.ranking, tp.avgtech, tss.avghse
 from developers d
 inner join squads s on d.squadId = s.id
-left join tech_points tp on tp.id = d.id
-left join soft_skill_points tss on tss.id = d.id
-where d.campusId = 42
-group by d.name, d.lastname, d.age, d.campusId, d.photoUrl
-order by (IFNULL(tp.avgtech, 0) + IFNULL(tss.avghse, 0)) desc;
+inner join tech_points tp on tp.id = d.id
+inner join soft_skill_points tss on tss.id = d.id
+where d.campusId = ?
+group by d.name, d.lastname, d.age, d.campusId, d.photoUrl,
+d.title, s.name, d.ranking, tp.avgtech, tss.avghse
+order by (tp.avgtech + tss.avghse) desc;
+
+DROP TABLE tech_points;
+DROP TABLE soft_skill_points;

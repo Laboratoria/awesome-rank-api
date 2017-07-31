@@ -100,6 +100,9 @@ apiRoutes.get('/developers', function(req, res) {
 
 apiRoutes.get('/questions', function(req, res) {
   models.Question.all({
+		where: {
+			active: true
+		},
     include: [{
       model: models.Answer,
     }]

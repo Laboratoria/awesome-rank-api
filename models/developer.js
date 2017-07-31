@@ -7,12 +7,13 @@ module.exports = function(sequelize, DataTypes) {
     campusId: DataTypes.STRING,
     photoUrl: DataTypes.STRING,
     title: DataTypes.STRING,
-    captainLink: DataTypes.STRING
+    captainLink: DataTypes.STRING,
+		ranking: DataTypes.INTEGER
   }, {
     classMethods: {
       associate: function(models) {
         // associations can be defined here
-        models.Squad.hasMany(Developer, { constraints: true }); 
+        models.Squad.hasMany(Developer, { constraints: true });
       }
     }
   });
