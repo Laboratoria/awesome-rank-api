@@ -5,7 +5,7 @@ AS (
   from developers d
   inner join rankings r on r.developerId = d.id
   inner join questions q on r.questionId = q.id
-  where q.type = 'tech' and r.points > 0
+  where q.type in ('tech','uxd') and r.points > 0
   group by 1
 );
 
